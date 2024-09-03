@@ -1,0 +1,91 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.burger-menu {
+    padding-right: 25px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.burger-bar {
+    width: 35px;
+    height: 4px;
+    background-color: white;
+
+}
+
+.menu {
+    /*max-height: 300px;
+    overflow: auto;
+    background-color: black;
+    margin-top: 25px;*/
+    
+  
+    @media screen and (max-device-width:1024px) and (orientation:portrait){
+        @apply mt-[25px] py-5 bg-black  pb-[1000px] pt-14 overflow-hidden
+ 
+    }
+    
+    @media screen and (max-device-width:1024px) and (orientation:landscape){
+        @apply mt-[25px] bg-black max-h-[300px] pb-[1000px] pt-[10px] overflow-auto
+        
+    }
+    @apply bg-black h-[5000px] mt-[25px]
+      
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: inherit;
+}
+
+.open {
+    .burger-bar:nth-child(3) {
+        transform: rotate(135deg) translate(-0.9em, 0.2em);
+        transition: ease-out 0.5s;
+    }
+
+    .burger-bar:nth-child(1) {
+        transform: rotate(45deg) translate(0.75em, 0em);
+        transition: ease-out 0.5s;
+    }
+
+    .burger-bar:nth-child(2) {
+        transform: scale(0);
+    }
+}
+
+.close {
+    .burger-bar {
+        transform: rotate(0) translate(0);
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+    }
+}
+
+
+.ham-menu-link {
+    @apply duration-150 mt-8 text-4xl font-bold text-center text-white cursor-pointer flex flex-col;
+
+    &:hover {
+        @apply text-primary-default
+    }
+
+    &.active {
+        @apply text-primary-default
+    }
+}
+
+@media (max-width: 992px) {
+    .lock-scroll {
+        overflow: hidden;
+    }
+}

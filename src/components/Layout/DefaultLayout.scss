@@ -1,0 +1,17 @@
+.deflay {
+  background-color: black;
+}
+
+.myContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  @apply lg:px-14 px-5 
+}
+
+.bgImage {
+  background-image: url("http://gentium.themeflo.com/demo/assets/images/hero_02.jpg");
+  background-repeat: no-repeat;
+  background-position: 70%;
+  background-size: 625px;
+  padding-top: 150px;
+}

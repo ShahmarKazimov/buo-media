@@ -1,0 +1,18 @@
+.menu-link-item {
+    @apply relative text-lg font-bold text-white cursor-pointer;
+
+    &::after {
+        content: "";
+        @apply transition-all -my-1 w-0 h-0.5 absolute left-0 bottom-0 bg-primary-default;
+
+        &:hover {
+            @apply w-6
+        }
+    }
+
+    &.active {
+        &::after {
+            @apply w-6
+        }
+    }
+}
